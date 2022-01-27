@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F599EE2A279AAEE00006019B /* PokemonMarketplaceAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599EE29279AAEE00006019B /* PokemonMarketplaceAppApp.swift */; };
+		F599EE2C279AAEE00006019B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599EE2B279AAEE00006019B /* ContentView.swift */; };
+		F599EE2E279AAEE10006019B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F599EE2D279AAEE10006019B /* Assets.xcassets */; };
+		F599EE31279AAEE10006019B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F599EE30279AAEE10006019B /* Preview Assets.xcassets */; };
+		F599EE39279AB0410006019B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F599EE38279AB0410006019B /* FirebaseAuth */; };
+		F599EE3B279AB0410006019B /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = F599EE3A279AB0410006019B /* FirebaseDatabase */; };
+		F599EE3D279AB0410006019B /* FirebaseDatabaseSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = F599EE3C279AB0410006019B /* FirebaseDatabaseSwift-Beta */; };
+		F599EE3F279AB0410006019B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F599EE3E279AB0410006019B /* FirebaseFirestore */; };
+		F599EE41279AB0410006019B /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F599EE40279AB0410006019B /* FirebaseFirestoreCombine-Community */; };
+		F599EE43279AB0410006019B /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = F599EE42279AB0410006019B /* FirebaseFirestoreSwift-Beta */; };
+		F599EE45279AB0410006019B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F599EE44279AB0410006019B /* FirebaseStorage */; };
+		F599EE47279AB09E0006019B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599EE46279AB09E0006019B /* AppDelegate.swift */; };
+		F599EE49279AB3AB0006019B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F599EE48279AB3AB0006019B /* GoogleService-Info.plist */; };
+		F599EE4C279AB4480006019B /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599EE4B279AB4480006019B /* RegisterView.swift */; };
+		F599EE4E279AB4530006019B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599EE4D279AB4530006019B /* LoginView.swift */; };
+		F599EE56279AB6340006019B /* ValidationServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599EE55279AB6340006019B /* ValidationServicesTests.swift */; };
+		F599EE5D279AB9020006019B /* ValidationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599EE5C279AB9020006019B /* ValidationServices.swift */; };
+		F5F235C4279D858B00697411 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F235C3279D858B00697411 /* UserDataModel.swift */; };
+		F5F235C6279D85FB00697411 /* UserDataCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F235C5279D85FB00697411 /* UserDataCreationView.swift */; };
+		F5F6268027A00CDD009DBABB /* UserFlowModeratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F6267F27A00CDD009DBABB /* UserFlowModeratorView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F599EE57279AB6340006019B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F599EE1E279AAEDF0006019B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F599EE25279AAEE00006019B;
+			remoteInfo = PokemonMarketplaceApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F599EE26279AAEE00006019B /* PokemonMarketplaceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonMarketplaceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F599EE29279AAEE00006019B /* PokemonMarketplaceAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonMarketplaceAppApp.swift; sourceTree = "<group>"; };
+		F599EE2B279AAEE00006019B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F599EE2D279AAEE10006019B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F599EE30279AAEE10006019B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F599EE46279AB09E0006019B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F599EE48279AB3AB0006019B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F599EE4B279AB4480006019B /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		F599EE4D279AB4530006019B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F599EE53279AB6340006019B /* PokemonMarketplaceAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonMarketplaceAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F599EE55279AB6340006019B /* ValidationServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationServicesTests.swift; sourceTree = "<group>"; };
+		F599EE5C279AB9020006019B /* ValidationServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationServices.swift; sourceTree = "<group>"; };
+		F5F235C3279D858B00697411 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
+		F5F235C5279D85FB00697411 /* UserDataCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataCreationView.swift; sourceTree = "<group>"; };
+		F5F6267F27A00CDD009DBABB /* UserFlowModeratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFlowModeratorView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F599EE23279AAEE00006019B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F599EE3D279AB0410006019B /* FirebaseDatabaseSwift-Beta in Frameworks */,
+				F599EE3F279AB0410006019B /* FirebaseFirestore in Frameworks */,
+				F599EE3B279AB0410006019B /* FirebaseDatabase in Frameworks */,
+				F599EE43279AB0410006019B /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				F599EE45279AB0410006019B /* FirebaseStorage in Frameworks */,
+				F599EE41279AB0410006019B /* FirebaseFirestoreCombine-Community in Frameworks */,
+				F599EE39279AB0410006019B /* FirebaseAuth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F599EE50279AB6340006019B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F599EE1D279AAEDF0006019B = {
+			isa = PBXGroup;
+			children = (
+				F599EE28279AAEE00006019B /* PokemonMarketplaceApp */,
+				F599EE54279AB6340006019B /* PokemonMarketplaceAppTests */,
+				F599EE27279AAEE00006019B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F599EE27279AAEE00006019B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F599EE26279AAEE00006019B /* PokemonMarketplaceApp.app */,
+				F599EE53279AB6340006019B /* PokemonMarketplaceAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F599EE28279AAEE00006019B /* PokemonMarketplaceApp */ = {
+			isa = PBXGroup;
+			children = (
+				F599EE48279AB3AB0006019B /* GoogleService-Info.plist */,
+				F5F235C2279D857B00697411 /* Model */,
+				F599EE4A279AB4220006019B /* SignUpFlow */,
+				F5F6267E27A00B12009DBABB /* MainView */,
+				F599EE46279AB09E0006019B /* AppDelegate.swift */,
+				F599EE29279AAEE00006019B /* PokemonMarketplaceAppApp.swift */,
+				F599EE2B279AAEE00006019B /* ContentView.swift */,
+				F5F6267F27A00CDD009DBABB /* UserFlowModeratorView.swift */,
+				F599EE2D279AAEE10006019B /* Assets.xcassets */,
+				F599EE2F279AAEE10006019B /* Preview Content */,
+			);
+			path = PokemonMarketplaceApp;
+			sourceTree = "<group>";
+		};
+		F599EE2F279AAEE10006019B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F599EE30279AAEE10006019B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F599EE4A279AB4220006019B /* SignUpFlow */ = {
+			isa = PBXGroup;
+			children = (
+				F599EE4B279AB4480006019B /* RegisterView.swift */,
+				F599EE4D279AB4530006019B /* LoginView.swift */,
+				F599EE5C279AB9020006019B /* ValidationServices.swift */,
+				F5F235C5279D85FB00697411 /* UserDataCreationView.swift */,
+			);
+			path = SignUpFlow;
+			sourceTree = "<group>";
+		};
+		F599EE54279AB6340006019B /* PokemonMarketplaceAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F599EE55279AB6340006019B /* ValidationServicesTests.swift */,
+			);
+			path = PokemonMarketplaceAppTests;
+			sourceTree = "<group>";
+		};
+		F5F235C2279D857B00697411 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F5F235C3279D858B00697411 /* UserDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F5F6267E27A00B12009DBABB /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F599EE25279AAEE00006019B /* PokemonMarketplaceApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F599EE34279AAEE10006019B /* Build configuration list for PBXNativeTarget "PokemonMarketplaceApp" */;
+			buildPhases = (
+				F599EE22279AAEE00006019B /* Sources */,
+				F599EE23279AAEE00006019B /* Frameworks */,
+				F599EE24279AAEE00006019B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PokemonMarketplaceApp;
+			packageProductDependencies = (
+				F599EE38279AB0410006019B /* FirebaseAuth */,
+				F599EE3A279AB0410006019B /* FirebaseDatabase */,
+				F599EE3C279AB0410006019B /* FirebaseDatabaseSwift-Beta */,
+				F599EE3E279AB0410006019B /* FirebaseFirestore */,
+				F599EE40279AB0410006019B /* FirebaseFirestoreCombine-Community */,
+				F599EE42279AB0410006019B /* FirebaseFirestoreSwift-Beta */,
+				F599EE44279AB0410006019B /* FirebaseStorage */,
+			);
+			productName = PokemonMarketplaceApp;
+			productReference = F599EE26279AAEE00006019B /* PokemonMarketplaceApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F599EE52279AB6340006019B /* PokemonMarketplaceAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F599EE59279AB6340006019B /* Build configuration list for PBXNativeTarget "PokemonMarketplaceAppTests" */;
+			buildPhases = (
+				F599EE4F279AB6340006019B /* Sources */,
+				F599EE50279AB6340006019B /* Frameworks */,
+				F599EE51279AB6340006019B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F599EE58279AB6340006019B /* PBXTargetDependency */,
+			);
+			name = PokemonMarketplaceAppTests;
+			productName = PokemonMarketplaceAppTests;
+			productReference = F599EE53279AB6340006019B /* PokemonMarketplaceAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F599EE1E279AAEDF0006019B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					F599EE25279AAEE00006019B = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					F599EE52279AB6340006019B = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = F599EE25279AAEE00006019B;
+					};
+				};
+			};
+			buildConfigurationList = F599EE21279AAEDF0006019B /* Build configuration list for PBXProject "PokemonMarketplaceApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F599EE1D279AAEDF0006019B;
+			packageReferences = (
+				F599EE37279AB0410006019B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = F599EE27279AAEE00006019B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F599EE25279AAEE00006019B /* PokemonMarketplaceApp */,
+				F599EE52279AB6340006019B /* PokemonMarketplaceAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F599EE24279AAEE00006019B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F599EE31279AAEE10006019B /* Preview Assets.xcassets in Resources */,
+				F599EE49279AB3AB0006019B /* GoogleService-Info.plist in Resources */,
+				F599EE2E279AAEE10006019B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F599EE51279AB6340006019B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F599EE22279AAEE00006019B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F599EE47279AB09E0006019B /* AppDelegate.swift in Sources */,
+				F599EE4C279AB4480006019B /* RegisterView.swift in Sources */,
+				F5F6268027A00CDD009DBABB /* UserFlowModeratorView.swift in Sources */,
+				F5F235C4279D858B00697411 /* UserDataModel.swift in Sources */,
+				F599EE2C279AAEE00006019B /* ContentView.swift in Sources */,
+				F599EE4E279AB4530006019B /* LoginView.swift in Sources */,
+				F599EE5D279AB9020006019B /* ValidationServices.swift in Sources */,
+				F5F235C6279D85FB00697411 /* UserDataCreationView.swift in Sources */,
+				F599EE2A279AAEE00006019B /* PokemonMarketplaceAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F599EE4F279AB6340006019B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F599EE56279AB6340006019B /* ValidationServicesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F599EE58279AB6340006019B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F599EE25279AAEE00006019B /* PokemonMarketplaceApp */;
+			targetProxy = F599EE57279AB6340006019B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F599EE32279AAEE10006019B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F599EE33279AAEE10006019B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F599EE35279AAEE10006019B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PokemonMarketplaceApp/Preview Content\"";
+				DEVELOPMENT_TEAM = Q98J247HTL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exploringswift.PokemonMarketplaceApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F599EE36279AAEE10006019B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PokemonMarketplaceApp/Preview Content\"";
+				DEVELOPMENT_TEAM = Q98J247HTL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exploringswift.PokemonMarketplaceApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F599EE5A279AB6340006019B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q98J247HTL;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exploringswift.PokemonMarketplaceAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokemonMarketplaceApp.app/PokemonMarketplaceApp";
+			};
+			name = Debug;
+		};
+		F599EE5B279AB6340006019B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q98J247HTL;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exploringswift.PokemonMarketplaceAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokemonMarketplaceApp.app/PokemonMarketplaceApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F599EE21279AAEDF0006019B /* Build configuration list for PBXProject "PokemonMarketplaceApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F599EE32279AAEE10006019B /* Debug */,
+				F599EE33279AAEE10006019B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F599EE34279AAEE10006019B /* Build configuration list for PBXNativeTarget "PokemonMarketplaceApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F599EE35279AAEE10006019B /* Debug */,
+				F599EE36279AAEE10006019B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F599EE59279AB6340006019B /* Build configuration list for PBXNativeTarget "PokemonMarketplaceAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F599EE5A279AB6340006019B /* Debug */,
+				F599EE5B279AB6340006019B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F599EE37279AB0410006019B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F599EE38279AB0410006019B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F599EE37279AB0410006019B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		F599EE3A279AB0410006019B /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F599EE37279AB0410006019B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		F599EE3C279AB0410006019B /* FirebaseDatabaseSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F599EE37279AB0410006019B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseDatabaseSwift-Beta";
+		};
+		F599EE3E279AB0410006019B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F599EE37279AB0410006019B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		F599EE40279AB0410006019B /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F599EE37279AB0410006019B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		F599EE42279AB0410006019B /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F599EE37279AB0410006019B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+		F599EE44279AB0410006019B /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F599EE37279AB0410006019B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F599EE1E279AAEDF0006019B /* Project object */;
+}
