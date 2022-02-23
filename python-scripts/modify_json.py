@@ -9,7 +9,7 @@ attribute_accepted = ['id','name','supertype','artist','images']
 filename = ''
 
 # Reading from the json file
-with open('base1.json', 'r') as data_file:
+with open('../Database-json/base1.json', 'r') as data_file:
     data = json.load(data_file)
     filename = os.path.basename(data_file.name)
 print("\nFilename: ",filename)
