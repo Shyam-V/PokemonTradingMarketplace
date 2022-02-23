@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState } from "react";
 
 // react-router-dom components
@@ -20,13 +21,40 @@ import MKTypography from "components/MKTypography";
 import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
 
+import { getFirestore,collection, addDoc  } from "firebase/firestore"
+
+
 function SignInBasic() {
   const [rememberMe, setRememberMe] = useState(false);
 
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
 
+  const [value, setValue] = React.useState("");
+  const db = getFirestore()
+  const getValue = (event) => {
+    setValue(event.target.value);
+  };
+
+  const  addValue = async function () {
+
+    try {
+      const docRef = await addDoc(collection(db, "values"), {
+        value: value
+      });
+      console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  };
+
   return (
     <>
+     <div>
+      <input onBlur={getValue} type='text' />
+      <button type='button' onClick={addValue}>
+        Add
+      </button>
+    </div>
       <MKBox px={1} width="100%" height="100vh" mx="auto" position="relative" zIndex={2}>
         <Grid container spacing={1} justifyContent="center" alignItems="center" height="100%">
           <Grid item xs={11} sm={9} md={5} lg={4} xl={3}>

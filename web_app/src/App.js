@@ -13,6 +13,19 @@ import About from "layouts/pages/landing-pages/about-us";
 
 // Material Kit 2 React routes
 import routes from "routes";
+import {initializeApp} from 'firebase/app';
+
+const config = {
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  databaseURL: process.env.REACT_APP_databaseURL,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
+};
+
+initializeApp(config);
 
 export default function App() {
   const { pathname } = useLocation();
