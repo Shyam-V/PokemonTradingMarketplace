@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useCallback } from "react";
 
 // react-router-dom components
 import { Link } from "react-router-dom";
@@ -19,14 +19,36 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 function SignUp() {
   const [rememberMe, setRememberMe] = useState(false);
 
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
 
+  const handleSignUp = useCallback(async event => {
+    const auth = getAuth();
+    event.preventDefault();
+    const { email, password } = event.target.elements;
+    try {
+      createUserWithEmailAndPassword(auth,email.value, password.value);
+    } catch (error) {
+      alert(error);
+    }
+  });
   return (
     <>
+        <form onSubmit={handleSignUp}>
+        <label>
+          Email
+          <input name="email" type="email" placeholder="Email" />
+        </label>
+        <label>
+          Password
+          <input name="password" type="password" placeholder="Password" />
+        </label>
+        <button type="submit">Sign Up</button>
+      </form>
       <MKBox px={1} width="100%" height="100vh" mx="auto" position="relative" zIndex={2}>
         <Grid container spacing={1} justifyContent="center" alignItems="center" height="100%">
           <Grid item xs={11} sm={9} md={5} lg={4} xl={3}>
