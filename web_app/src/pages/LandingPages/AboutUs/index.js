@@ -18,6 +18,13 @@ import Team from "pages/LandingPages/AboutUs/sections/Team";
 import Featuring from "pages/LandingPages/AboutUs/sections/Featuring";
 import Newsletter from "pages/LandingPages/AboutUs/sections/Newsletter";
 
+
+import * as React from 'react';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
+
 // Routes
 import routes from "routes";
 import footerRoutes from "footer.routes";
@@ -67,7 +74,7 @@ function AboutUs() {
               Welcome to the Market Place
             </MKTypography>
             <MKTypography variant="body1" color="white" opacity={0.8} mt={1} mb={3}>
-              Buy Pokemon cards and become a collector
+              Buy Pokemon cards and become a Trainer
             </MKTypography>
             <MKButton color="default" sx={{ color: ({ palette: { dark } }) => dark.main }}>
               create account
@@ -75,11 +82,12 @@ function AboutUs() {
           </Grid>
         </Container>
       </MKBox>
+
       <Card
         sx={{
           p: 2,
           mx: { xs: 2, lg: 3 },
-          mt: -8,
+          mt: -5,
           mb: 4,
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
@@ -88,7 +96,31 @@ function AboutUs() {
         {/* <Team />
         <Featuring />
         <Newsletter /> */}
+
+      <CardActionArea>
+      <CardMedia
+          component="img"
+          image="https://www.denofgeek.com/wp-content/uploads/2021/04/Pikachu.png?fit=1920%2C1080"
+          height="140"
+          alt="green iguana"
+        />
+
+
+      <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            Pikachu
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Lizards are a widespread group of squamate reptiles, with over 6,000
+            species, ranging across all continents except Antarctica
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+
+      
       </Card>
+
+     
       {/* <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />
       </MKBox> */}
