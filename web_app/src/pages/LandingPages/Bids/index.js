@@ -1,4 +1,4 @@
-import { useEffect,useState } from "react";
+import { useEffect,useState,useCallback } from "react";
 import Grid from "@mui/material/Grid";
 import React, { Component } from 'react';
 import { useParams } from "react-router-dom";
@@ -10,10 +10,12 @@ import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
 
-import { getFirestore,collection, getDocs,doc,getDoc } from "firebase/firestore"
+import { getFirestore,collection, getDocs,doc,getDoc ,setDoc,addDoc } from "firebase/firestore"
 
-// Image
-import userEvent from "@testing-library/user-event";
+
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import './modal.css'
 
 
 function BidsPage()  {
@@ -35,10 +37,31 @@ function BidsPage()  {
 
   },[])
 
+  const handleBid = useCallback(async event => {
+    event.preventDefault();
+    const { price } = event.target.elements;
+    try {
+      const db = getFirestore();
+      // Add a new document in collection "cities"
+      const docRef = await addDoc(collection(db, "Bids"), {
+        card_id: params.id,
+        price: price.value,
+        status: true,
+        duration: 10,
+      });
+      console.log("Document written with ID: ", docRef.id);
+
+    } catch (error) {
+      alert(error);
+    }
+  });
+
   if(!isLoading){
     return (
       <>
+      
         <Grid container spacing={3} alignItems="center">
+       
           <Grid item xs={12} lg={6}>
             <MKBox
               display={{ xs: "none", lg: "flex" }}
@@ -83,6 +106,7 @@ function BidsPage()  {
                 <MKTypography variant="h3" color="white">
                   Contact us
                 </MKTypography>
+                
               </MKBox>
               <MKBox p={3}>
                 <MKTypography variant="body2" color="text" mb={3}>
@@ -121,9 +145,34 @@ function BidsPage()  {
                     </Grid>
                   </Grid>
                   <Grid container item justifyContent="center" xs={12} mt={5} mb={2}>
-                    <MKButton type="submit" variant="gradient" color="info">
+                    <Popup
+                      trigger={<MKButton variant="gradient" color="info">
                       Place Bid
-                    </MKButton>
+                    </MKButton>}
+                      modal
+                      nested
+                    >
+                      {close => (
+                        <div className="modal">
+                          <button className="close" onClick={close}>
+                            &times;
+                          </button>
+                          <div className="header"> Place Bid</div>
+                          <div className="content">
+                          <MKBox component="form" role="form" onSubmit={handleBid}>
+                          <MKBox mb={3}>
+                            <MKInput name="price" type="price" label="Price" fullWidth />
+                          </MKBox>
+                          <MKBox mt={4} mb={1}>
+                            <MKButton variant="gradient" color="info" type="submit" fullWidth>
+                              Place bid
+                            </MKButton>
+                          </MKBox>
+                        </MKBox>
+                          </div>
+                        </div>
+                      )}
+                    </Popup>
                   </Grid>
                 </MKBox>
               </MKBox>
