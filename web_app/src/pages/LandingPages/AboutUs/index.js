@@ -25,6 +25,13 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
+import Box from '@mui/material/Box';
+import BottomNavigation from '@mui/material/BottomNavigation';
+import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+import RestoreIcon from '@mui/icons-material/Restore';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+
 // Routes
 import routes from "routes";
 import footerRoutes from "footer.routes";
@@ -92,7 +99,7 @@ function AboutUs() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-        <Information />
+        {/* <Information /> */}
         {/* <Team />
         <Featuring />
         <Newsletter /> */}
@@ -101,6 +108,7 @@ function AboutUs() {
       <CardMedia
           component="img"
           image="https://www.denofgeek.com/wp-content/uploads/2021/04/Pikachu.png?fit=1920%2C1080"
+          justifyContent="center"
           height="140"
           alt="green iguana"
         />
@@ -111,7 +119,7 @@ function AboutUs() {
             Pikachu
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
+            Piakchu are a widespread group of squamate reptiles, with over 6,000
             species, ranging across all continents except Antarctica
           </Typography>
         </CardContent>
@@ -120,7 +128,12 @@ function AboutUs() {
       
       </Card>
 
-     
+      <BottomNavigation
+      >
+        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
+        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
+        <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+      </BottomNavigation>
       {/* <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />
       </MKBox> */}
