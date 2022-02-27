@@ -17,11 +17,39 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import './modal.css'
 
+import DataTable from 'react-data-table-component';
 
 function BidsPage()  {
   const params = useParams();
   const[isLoading,setIsLoading] = useState(true)
+  const[bidExists,setbidExists] = useState(false)
   const[bgImage,setbgImage]  = useState("")
+  const[bidData,setbidData]  = useState([])
+
+
+  const columns = [
+    {
+        name: 'Username',
+        selector: row => row.username,
+    },
+    {
+        name: 'Price',
+        selector: row => row.price,
+    },
+];
+
+const data = [
+    {
+        id: 1,
+        username: 'user_1',
+        price: '25$',
+    },
+    {
+        id: 2,
+        username: 'user_2',
+        price: '22$',
+    },
+  ]
 
   useEffect(async() =>{
     const db = getFirestore();
@@ -35,6 +63,18 @@ function BidsPage()  {
     console.log("No such document!");
     }
 
+    const docRef2 = doc(db, "Bids", "bid_"+params.id);
+    const docSnap2 = await getDoc(docRef2);
+
+    if (docSnap2.exists()) {
+    console.log(docSnap2.data())
+    setbidData(docSnap2.data())
+    setbidExists(true)
+    } else {
+    console.log("No such document!");
+    }
+
+
   },[])
 
   const handleBid = useCallback(async event => {
@@ -43,13 +83,12 @@ function BidsPage()  {
     try {
       const db = getFirestore();
       // Add a new document in collection "cities"
-      const docRef = await addDoc(collection(db, "Bids"), {
+      await setDoc(doc(db, "Bids","bid_"+params.id), {
         card_id: params.id,
-        price: price.value,
+        user_price: [{user_id:"123456",price:price.value}],
         status: true,
         duration: 10,
       });
-      console.log("Document written with ID: ", docRef.id);
 
     } catch (error) {
       alert(error);
@@ -59,18 +98,18 @@ function BidsPage()  {
   if(!isLoading){
     return (
       <>
-      
-        <Grid container spacing={3} alignItems="center">
+        
+        <Grid container spacing={0.5} alignItems="center">
        
           <Grid item xs={12} lg={6}>
             <MKBox
               display={{ xs: "none", lg: "flex" }}
-              width="calc(100% - 2rem)"
-              height="calc(100vh - 2rem)"
+              width="calc(100% - 3rem)"
+              height="calc(100vh - 7rem)"
               borderRadius="lg"
-              ml={2}
-              mt={2}
-              sx={{ backgroundImage: `url(${bgImage})` }}
+
+              sx={{ backgroundImage: `url(${bgImage})`,backgroundRepeat: 'no-repeat', 
+              backgroundPosition: 'center'}}
             />
           </Grid>
           <Grid
@@ -85,14 +124,14 @@ function BidsPage()  {
           >
             <MKBox
               bgColor="white"
-              borderRadius="xl"
+              borderRadius="xxl"
               shadow="lg"
               display="flex"
               flexDirection="column"
               justifyContent="center"
               mt={{ xs: 20, sm: 18, md: 20 }}
               mb={{ xs: 20, sm: 18, md: 20 }}
-              mx={3}
+              mx={0.001}
             >
               <MKBox
                 variant="gradient"
@@ -104,46 +143,22 @@ function BidsPage()  {
                 mt={-3}
               >
                 <MKTypography variant="h3" color="white">
-                  Contact us
+                  Bids
                 </MKTypography>
                 
               </MKBox>
               <MKBox p={3}>
-                <MKTypography variant="body2" color="text" mb={3}>
-                   For further questions, includng partnership opportunities, please email
-                  hello@creative-tim.com or contact using our contact form.
-                </MKTypography>
+                <div>
+                {bidExists
+                    ? <DataTable
+                    columns={columns}
+                    data={data}
+                />
+                    : <div>No Data</div>
+                  }
+                </div>
+
                 <MKBox width="100%" component="form" method="post" autocomplete="off">
-                  <Grid container spacing={3}>
-                    <Grid item xs={12} md={6}>
-                      <MKInput
-                        variant="standard"
-                        label="Full Name"
-                        InputLabelProps={{ shrink: true }}
-                        fullWidth
-                      />
-                    </Grid>
-                    <Grid item xs={12} md={6}>
-                      <MKInput
-                        type="email"
-                        variant="standard"
-                        label="Email"
-                        InputLabelProps={{ shrink: true }}
-                        fullWidth
-                      />
-                    </Grid>
-                    <Grid item xs={12}>
-                      <MKInput
-                        variant="standard"
-                        label="What can we help you?"
-                        placeholder="Describe your problem in at least 250 characters"
-                        InputLabelProps={{ shrink: true }}
-                        multiline
-                        fullWidth
-                        rows={6}
-                      />
-                    </Grid>
-                  </Grid>
                   <Grid container item justifyContent="center" xs={12} mt={5} mb={2}>
                     <Popup
                       trigger={<MKButton variant="gradient" color="info">
