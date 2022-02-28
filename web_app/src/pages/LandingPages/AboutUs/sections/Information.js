@@ -21,7 +21,6 @@ function Information() {
         <Grid container spacing={5} justifyContent="flex-start">
 
         {documents.map((documents) => (
-
           <Grid item xs={12} lg={4} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }} >
           <CenteredBlogCard
             image={documents.img}
@@ -29,7 +28,7 @@ function Information() {
             description="Pokemon"
             action={{
               type: "internal",
-              route: "pages/company/about-us",
+              route: "pages/landing-pages/bids/"+documents.id,
               color: "info",
               label: "Buy Now",
             }}

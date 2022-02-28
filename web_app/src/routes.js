@@ -7,6 +7,7 @@ import ContactUs from "layouts/pages/landing-pages/contact-us";
 import Author from "layouts/pages/landing-pages/author";
 import SignIn from "layouts/pages/authentication/sign-in";
 import SignUp from "layouts/pages/authentication/sign-up";
+import BidsPage from "layouts/pages/landing-pages/bids";
 
 const routes = [
   {
@@ -32,6 +33,11 @@ const routes = [
             name: "author",
             route: "/pages/landing-pages/author",
             component: <Author />,
+          },
+          {
+            name: "bids",
+            route: "/pages/landing-pages/bids/:id",
+            component: <BidsPage />,
           },
         ],
       },
